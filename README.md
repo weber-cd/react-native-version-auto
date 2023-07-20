@@ -1,6 +1,6 @@
 forked from ancon-labs/react-native-version
 
-yarn add https://github.com/weber-cd/react-native-version-auto.git
+yarn add react-native-version-auto
 
 # react-native-version
 
