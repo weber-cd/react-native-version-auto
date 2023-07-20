@@ -16,9 +16,9 @@ Seamlessly shadows the behaviour of [`npm version`](https://docs.npmjs.com/cli/v
 ### Setup
 
 ```bash
-$ npm install react-native-version --save-dev
+$ npm install react-native-version-auto --save-dev
 # or
-$ yarn add react-native-version --dev
+$ yarn add react-native-version-auto --dev
 ```
 
 Hook into the "version" or "postversion" npm script in your app's package.json:
@@ -29,7 +29,7 @@ Hook into the "version" or "postversion" npm script in your app's package.json:
   "version": "0.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-+   "postversion": "react-native-version"
++   "postversion": "react-native-version-auto"
   }
 }
 ```
@@ -38,16 +38,16 @@ Hook into the "version" or "postversion" npm script in your app's package.json:
 
 Before you publish a new build of your app, run `npm version <newversion>`.
 
-react-native-version will then update your `android/` and `ios/` code. Depending on the script and options you choose, it can also automatically amend the version bump commit and update the Git tag created by `npm version`. This method should be useful in most cases. If you need more control, take a look at the CLI and options below.
+react-native-version-auto will then update your `android/` and `ios/` code. Depending on the script and options you choose, it can also automatically amend the version bump commit and update the Git tag created by `npm version`. This method should be useful in most cases. If you need more control, take a look at the CLI and options below.
 
 ## CLI
 
 ### Setup
 
 ```bash
-$ npm install -g react-native-version
+$ npm install -g react-native-version-auto
 # or
-$ yarn global add react-native-version
+$ yarn global add react-native-version-auto
 ```
 
 ### Example usage
@@ -55,7 +55,7 @@ $ yarn global add react-native-version
 ```bash
 $ cd AwesomeProject/
 $ npm version patch
-$ react-native-version
+$ react-native-version-auto
 ```
 
 ## Options
@@ -64,13 +64,13 @@ $ react-native-version
 
     -V, --version                         output the version number
     -a, --amend                           Amend the previous commit. This is done
-    automatically when react-native-version
+    automatically when react-native-version-auto
     is run from the "version" or
     "postversion" npm script. Use
     "--never-amend" if you never want to
     amend. Also, if the previous commit is
     a valid npm-version commit,
-    react-native-version will update the
+    react-native-version-auto will update the
     Git tag pointing to this commit.
     --skip-tag                            For use with "--amend", if you don't
     want to update Git tags. Use this
@@ -95,7 +95,7 @@ $ react-native-version
     "CFBundleVersion", as long as
     "CFBundleShortVersionString" changes.
     To make it consistent across platforms,
-    react-native-version bumps both by
+    react-native-version-auto bumps both by
     default. You can use this option if you
     prefer to keep the build number value
     at "1" after every version change. If
@@ -128,8 +128,8 @@ You can apply these options to the "version" or "postversion" script too. If for
 ```diff
 {
   "scripts": {
--   "postversion": "react-native-version"
-+   "postversion": "react-native-version --never-amend"
+-   "postversion": "react-native-version-auto"
++   "postversion": "react-native-version-auto --never-amend"
   }
 }
 ```
@@ -141,13 +141,13 @@ The default behaviour is to version all React Native platforms. You can target s
 ```bash
 $ RNV=android,ios npm version patch
 # or
-$ RNV=android,ios react-native-version
+$ RNV=android,ios react-native-version-auto
 ```
 
 When using the CLI, you can even combine both methods and make your teammates rage :smiling_imp: :suspect:
 
 ```bash
-$ RNV=android react-native-version --target ios
+$ RNV=android react-native-version-auto --target ios
 ```
 
 :rage1: :speak_no_evil:
@@ -167,7 +167,7 @@ The behavior can be also adjusted by `.npmrc` and `.yarnrc` config files.
 ## API
 
 ```javascript
-import { version } from "react-native-version";
+import { version } from "react-native-version-auto";
 
 async function doSomething() {
   const versionResult = await version({
