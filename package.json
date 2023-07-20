@@ -1,20 +1,20 @@
 {
-  "name": "react-native-version",
+  "name": "react-native-version-auto",
   "description": "Version your React Native or Expo app in a `npm version` fashion.",
   "license": "MIT",
   "author": "Martin Stovicek",
-  "homepage": "https://github.com/stovmascript/react-native-version#readme",
+  "homepage": "https://github.com/weber-cd/react-native-version-auto#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stovmascript/react-native-version.git"
+    "url": "git+https://github.com/weber-cd/react-native-version-auto.git"
   },
   "bugs": {
-    "url": "https://github.com/stovmascript/react-native-version/issues"
+    "url": "https://github.com/weber-cd/react-native-version-auto/issues"
   },
-  "version": "4.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "bin": {
-    "react-native-version": "cli.js"
+    "react-native-version-auto": "cli.js"
   },
   "scripts": {
     "docs": "./docs.sh",
