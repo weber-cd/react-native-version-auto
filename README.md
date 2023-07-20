@@ -1,6 +1,4 @@
-forked from ancon-labs/react-native-version
-
-yarn add react-native-version-auto
+### forked from ancon-labs/react-native-version,fixed some issues
 
 # react-native-version
 
