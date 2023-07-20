@@ -1,5 +1,7 @@
 forked from ancon-labs/react-native-version
 
+yarn add https://github.com/weber-cd/react-native-version-auto.git
+
 # react-native-version
 
 [![license](https://badgen.net/github/license/stovmascript/react-native-version)](https://github.com/stovmascript/react-native-version/blob/master/LICENSE)
